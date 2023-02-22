@@ -124,5 +124,31 @@ namespace Калькулятор_для_дяди_Димы
             bool b = Convert.ToBoolean(Convert.ToInt32(textBox2.Text));
             label2.Text = $"Результат: {a ^ b}";
         }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            int a = Convert.ToInt32(textBox1.Text);
+            int b = Convert.ToInt32(textBox2.Text);
+            label2.Text = $"Результат: \n√a = {Math.Sqrt(a)}\n√b = {Math.Sqrt(b)}";
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            int a = Convert.ToInt32(textBox1.Text);
+            int b = Convert.ToInt32(textBox2.Text);
+            label2.Text = $"Результат: \na² = {a*a}\nb² = {b*b}";
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            int a = Convert.ToInt32(textBox1.Text);
+            int b = Convert.ToInt32(textBox2.Text);
+            int c = a;
+            for (int i = 1; i < b; i++)
+            {
+                c *= a;
+            }
+            label2.Text = $"Результат: a^b = {c}";
+        }
     }
 }
